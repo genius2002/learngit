@@ -1,9 +1,16 @@
 package com.weston.iaaa.impl.sort;
 
+/**
+ * <p>冒泡排序</p>
+ * 
+ * @author weston
+ *
+ * @param <T>
+ */
 public class BubbleSort<T extends Comparable<T>> extends AbstractSort<T>{
 
 	@Override
-	public void order(T[] array, boolean isDesc) {
+	public void sort(T[] array, boolean isDesc) {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = 0; j < array.length - 1 - i; j++) {
 				if ((array[j].compareTo(array[j + 1]) > 0 && !isDesc)
@@ -18,11 +25,11 @@ public class BubbleSort<T extends Comparable<T>> extends AbstractSort<T>{
 
 	@Override
 	public void sortAsc(T[] array) {
-		order(array, false);
+		sort(array, false);
 	}
 
 	@Override
 	public void sortDesc(T[] array) {
-		order(array, true);
+		sort(array, true);
 	}
 }

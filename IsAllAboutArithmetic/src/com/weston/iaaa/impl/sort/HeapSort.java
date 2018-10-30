@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 import com.weston.iaaa.util.RandomUtil;
 
+/**
+ * <p>堆排序</p>
+ * @author weston
+ *
+ * @param <T>
+ */
 public class HeapSort<T extends Comparable<T>> extends AbstractSort<T> {
 
 	private int left(int n) {
@@ -87,7 +93,7 @@ public class HeapSort<T extends Comparable<T>> extends AbstractSort<T> {
 	}
 
 	@Override
-	public void order(T[] array, boolean isDesc) {
+	public void sort(T[] array, boolean isDesc) {
 		if (isDesc) {
 			sortDesc(array);
 		} else {

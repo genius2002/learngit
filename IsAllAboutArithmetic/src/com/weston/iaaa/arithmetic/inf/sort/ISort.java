@@ -8,7 +8,7 @@ public interface ISort<T extends Comparable<T>> {
 	 *            false  : sort in ascdnding order true: sort in
 	 *            decreasing order
 	 */
-	void order(T[] array, boolean isDesc);
+	void sort(T[] array, boolean isDesc);
 	void sortAsc(T[] array);
 	void sortDesc(T[] array);
 }

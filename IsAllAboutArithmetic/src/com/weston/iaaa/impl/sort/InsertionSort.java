@@ -1,5 +1,12 @@
 package com.weston.iaaa.impl.sort;
 
+/**
+ * <p>插入排序</p>
+ * 
+ * @author weston
+ *
+ * @param <T>
+ */
 public class InsertionSort<T extends Comparable<T>> extends AbstractSort<T> {
 
 	@Override
@@ -13,7 +20,7 @@ public class InsertionSort<T extends Comparable<T>> extends AbstractSort<T> {
 	}
 
 	@Override
-	public void order(T[] array, boolean isDesc) {
+	public void sort(T[] array, boolean isDesc) {
 		if (isDesc) {
 			orderDesc(array);
 		} else {

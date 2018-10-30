@@ -1,19 +1,26 @@
 package com.weston.iaaa.impl.sort;
 
+/**
+ * <p>快速排序</p>
+ * 
+ * @author weston
+ *
+ * @param <T>
+ */
 public class QuickSort<T extends Comparable<T>> extends AbstractSort<T>{
 
 	@Override
 	public void sortAsc(T[] array) {
-		order(array, false);
+		sort(array, false);
 	}
 
 	@Override
 	public void sortDesc(T[] array) {
-		order(array, true);
+		sort(array, true);
 	}
 
 	@Override
-	public void order(T[] array, boolean isDesc) {
+	public void sort(T[] array, boolean isDesc) {
 		sort(array, 0, array.length - 1, isDesc);
 	}
 

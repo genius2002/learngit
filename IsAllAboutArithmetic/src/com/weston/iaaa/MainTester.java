@@ -22,13 +22,13 @@ public class MainTester {
 		// heap sort
 		Integer[] heapArray = copy(randomOrder);
 		long begin = System.currentTimeMillis();
-		quickSort.order(heapArray, isDesc);
+		quickSort.sort(heapArray, isDesc);
 		System.out.println("Sorted array uisng heap sort cost:[" + (System.currentTimeMillis() - begin) + "]");
 
 		// quick sort
 		Integer[] quickArray = copy(randomOrder);
 		begin = System.currentTimeMillis();
-		quickSort.order(quickArray, isDesc);
+		quickSort.sort(quickArray, isDesc);
 		System.out.println("Sorted array uisng quick sort cost:[" + (System.currentTimeMillis() - begin) + "]");
 		// System.out.println(Arrays.toString(quickArray));
 
@@ -42,7 +42,7 @@ public class MainTester {
 		// merger sort
 		Integer[] mergArray = copy(randomOrder);
 		begin = System.currentTimeMillis();
-		mergeSort.order(mergArray, isDesc);
+		mergeSort.sort(mergArray, isDesc);
 		System.out.println("Sorted array uisng merger sort cost:[" + (System.currentTimeMillis() - begin) + "]");
 		// System.out.println(Arrays.toString(insArray));
 
