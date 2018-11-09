@@ -1,5 +1,7 @@
 package com.weston.iaaa;
 
+import java.util.Arrays;
+
 import com.weston.iaaa.impl.sort.BubbleSort;
 import com.weston.iaaa.impl.sort.HeapSort;
 import com.weston.iaaa.impl.sort.InsertionSort;
@@ -9,14 +11,15 @@ import com.weston.iaaa.util.RandomUtil;
 
 public class MainTester {
 	public static void main(String[] args) {
-		Integer[] randomOrder = RandomUtil.getInstance().getRandomArray(1000000);
+		Integer[] randomOrder = RandomUtil.getInstance().getRandomArray(100);
+		System.out.println(Arrays.toString(randomOrder));
 		// String[] randomOrder = {"c","a","b"};
 		boolean isDesc = false;
-		InsertionSort insertionSort = new InsertionSort();
-		MergeSort mergeSort = new MergeSort();
-		BubbleSort bubbleSort = new BubbleSort();
-		QuickSort quickSort = new QuickSort();
-		HeapSort heapSort = new HeapSort();
+		InsertionSort<Integer> insertionSort = new InsertionSort<Integer>();
+		MergeSort<Integer> mergeSort = new MergeSort<Integer>();
+		BubbleSort<Integer> bubbleSort = new BubbleSort<Integer>();
+		QuickSort<Integer> quickSort = new QuickSort<Integer>();
+		HeapSort<Integer> heapSort = new HeapSort<Integer>();
 		// System.out.println(Arrays.toString(randomOrder));
 
 		// heap sort
